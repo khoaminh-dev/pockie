@@ -470,6 +470,49 @@ a {
   gap: 12px;
 }
 
+.ai-layers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.ai-layer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #eaeaea;
+}
+
+.layer-icon {
+  font-size: 28px;
+  background: #f3f4f6;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.layer-content h3 {
+  font-size: 16px;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.layer-content p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
 .problem-item,
 .solution-card,
 .feature-card,
