@@ -225,67 +225,94 @@ a {
 }
 
 .main-phone {
-  width: min(294px, 74vw);
-  min-height: 450px;
-  padding: 16px;
-  border-radius: 44px;
-  color: var(--ink);
-  background: linear-gradient(180deg, #ffffff 0%, #eef2f8 100%);
-  border: 1px solid rgba(255, 255, 255, 0.98);
-  box-shadow:
-    0 42px 110px rgba(32, 39, 52, 0.2),
-    0 0 0 10px rgba(255, 255, 255, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
-  animation: phone-float 7s var(--ease-out) infinite;
+  width: 320px;               
+  height: 650px;             
+  background-color: #f8f9fa;  
+  border: 14px solid #1a1a1a; 
+  border-radius: 44px;       
+  box-shadow: 0 24px 48px rgba(0,0,0,0.12); 
+  position: relative;
+  overflow: hidden;           
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 20px;    
+  gap: 16px;
+  margin: 0 auto;             
 }
 
-.phone-status {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: rgba(17, 24, 39, 0.74);
-  font-size: 12px;
-  font-weight: 800;
-}
 
 .dynamic-island {
-  width: 76px;
-  height: 22px;
-  border-radius: 999px;
-  background: var(--ink);
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+  background-color: #000000;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+
+.phone-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  box-sizing: border-box;
 }
 
 .app-card {
-  margin-top: 26px;
-  padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.86);
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 16px 44px rgba(17, 24, 39, 0.08);
-  backdrop-filter: blur(18px);
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.balance-card span,
-.product-caption span,
-.phone-label {
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.balance-card span {
+  font-size: 14px;
+  color: #666;
 }
 
 .balance-card strong {
   display: block;
-  margin-top: 10px;
-  color: var(--ink);
   font-size: 32px;
-  line-height: 1.1;
+  color: #1a1a1a;
+  margin: 8px 0;
 }
 
 .balance-card p {
-  margin: 12px 0 0;
-  line-height: 1.55;
+  font-size: 13px;
+  color: #10b981; 
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+
+.pet-nudge {
+  background: #eef2ff;
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid #c7d2fe;
+}
+
+.pet-nudge span {
+  font-weight: bold;
+  color: #4f46e5;
+  font-size: 14px;
+}
+
+.pet-nudge p {
+  font-size: 13px;
+  margin: 8px 0 0;
+  color: #3730a3;
 }
 
 .pet-nudge {
