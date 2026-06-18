@@ -1,7 +1,13 @@
 import { useEffect } from 'react'
 import ArchitecturalScene from './ArchitecturalScene'
-import pockieLogo from './assets/images/Pockie.png' // Ảnh logo Pockie
+import pockieLogo from './assets/images/Pockie.png' // Ảnh logo Pockie (Title)
+import logoBar from './assets/images/logo_nav.png' // Ảnh logo bar (Favicon)
 import ghostIcon from './assets/images/Mascot.png' // Ảnh ghost icon
+
+import myAvatar from './assets/images/my.jpg'
+import khoaAvatar from './assets/images/khoa.jpg'
+import vyAvatar from './assets/images/vy.jpg'
+import tranAvatar from './assets/images/tran.png'
 
 const painStats = [
   {
@@ -97,21 +103,25 @@ const team = [
     name: 'Trần Hải My',
     role: 'Team Leader',
     duty: 'Điều phối dự án, định hướng sản phẩm, quản lý tiến độ và kết nối các thành viên.',
+    image: myAvatar,
   },
   {
     name: 'Phùng Minh Khoa',
     role: 'Technical Lead',
     duty: 'Thiết kế kiến trúc hệ thống, nghiên cứu và triển khai các thành phần AI.',
+    image: khoaAvatar,
   },
   {
     name: 'Trần Khánh Vy',
     role: 'Business Analyst',
     duty: 'Nghiên cứu thị trường, phân tích nhu cầu khách hàng và xây dựng mô hình kinh doanh.',
+    image: vyAvatar,
   },
   {
     name: 'Thái Bảo Trân',
     role: 'Designer & Editor',
     duty: 'Thiết kế giao diện, xây dựng nhận diện sản phẩm và biên tập hồ sơ dự thi.',
+    image: tranAvatar,
   },
 ]
 
@@ -171,7 +181,7 @@ function App() {
         <div className="container topbar-inner">
           <a className="brand" href="#hero" aria-label="Pockie home">
             <img src={ghostIcon} alt="Ghost Icon" className="brand-mark-img" />
-            <img src={pockieLogo} alt="Pockie Logo" className="brand-text-img" />
+            <img src={logoBar} alt="Pockie Logo" className="brand-text-img" />
           </a>
           <nav className="nav">
             <a href="#problem">Vấn đề</a>
@@ -233,10 +243,6 @@ function App() {
                     </div>
                   </article>
                 </div>
-                <div className="product-caption">
-                  <span>Personal finance, distilled.</span>
-                  <strong>Ghi nhận. Hiểu. Hành động.</strong>
-                </div>
               </div>
             </div>
           </div>
@@ -275,7 +281,7 @@ function App() {
             <div>
               <div className="section-heading align-left" data-reveal>
                 <span className="section-kicker">Giải pháp</span>
-                <h2>Pockie giải quyết ba điểm nghẽn lớn nhất trong hành trình tài chính cá nhân.</h2>
+                <h2>Pockie giải quyết ba điểm nghẽn lớn nhất trong hành trình<span className="highlight">tài chính cá nhân</span>.</h2>
               </div>
               <div className="ai-layers-list">
   <div className="ai-layer-item">
@@ -316,8 +322,8 @@ function App() {
               </div>
               <div className="solution-grid">
                 <div className="solution-metric">
-                  <strong>1 app</strong>
-                  <span>logging, insight, nudge và rewards</span>
+                  <strong>1 App</strong>
+                  <span>Logging, insight, nudge và rewards</span>
                 </div>
                 <div className="solution-metric">
                   <strong>3 lớp AI</strong>
@@ -364,13 +370,14 @@ function App() {
                 <div>4. Người dùng giữ streak, nhận Xu và thấy tiến bộ mỗi ngày.</div>
               </div>
             </div>
-            <div className="video-placeholder" data-reveal>
-              <div className="video-orb" />
-              <div className="video-text">
-                <span>Optional demo loop</span>
-                <strong>Có thể thay bằng video mockup sản phẩm sau</strong>
-                <p>Khu vực này đã được chừa sẵn để bạn nhét loop video hoặc embed demo khi có asset thật.</p>
-              </div>
+            <div className="video-container" data-reveal>
+              <iframe
+              src="https://www.youtube.com/embed/rYWLIJB214Q?rel=0"
+              title="Pockie Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
             </div>
           </div>
         </section>
@@ -429,12 +436,14 @@ function App() {
           <div className="footer-heading" data-reveal>
             <span className="section-kicker">Đội ngũ & liên hệ</span>
             <h2>Nhóm phát triển Pockie</h2>
-            <p>Nếu bạn muốn thay ảnh thật của từng thành viên, mình đã bố trí sẵn avatar placeholder để chỉ cần đổi dữ liệu hoặc asset là xong.</p>
+          
           </div>
           <div className="team-grid">
             {team.map((member) => (
               <article className="team-card" key={member.name} data-reveal>
-                <div className="avatar">{member.name.charAt(0)}</div>
+                <div className="avatar">
+                  <img src={member.image} alt={member.name} className="avatar-img" />
+                </div>
                 <div className="team-meta">
                   <h3>{member.name}</h3>
                   <span>{member.role}</span>
