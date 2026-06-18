@@ -275,14 +275,29 @@ function App() {
                 <span className="section-kicker">Giải pháp</span>
                 <h2>Pockie giải quyết ba điểm nghẽn lớn nhất trong hành trình tài chính cá nhân.</h2>
               </div>
-              <div className="problem-list">
-                {problems.map((item, index) => (
-                  <div className="problem-item" key={item}>
-                    <span>{`0${index + 1}`}</span>
-                    <p>{item}</p>
-                  </div>
-                ))}
-              </div>
+              <div className="ai-layers-list">
+  <div className="ai-layer-item">
+    <div className="layer-icon"><i className="fas fa-camera"></i></div>
+    <div className="layer-content">
+      <h3>1. Lớp Capture</h3>
+      <p>Quét hóa đơn bằng OCR hoặc thu âm giọng nói (Speech-to-text) để tự động điền số tiền trong 1 giây.</p>
+    </div>
+  </div>
+  <div className="ai-layer-item">
+    <div className="layer-icon"><i className="fas fa-chart-bar" /></div>
+    <div className="layer-content">
+      <h3>2. Lớp Analysis</h3>
+      <p>Mô hình phân loại giao dịch tự động phân tích hành vi và biến dữ liệu thô thành biểu đồ dễ hiểu.</p>
+    </div>
+  </div>
+  <div className="ai-layer-item">
+    <div className="layer-icon"><i className="fas fa-robot" /></div>
+    <div className="layer-content">
+      <h3>3. Lớp Recommendation</h3>
+      <p>AI Pet cá nhân hóa đóng vai trò như một người bạn, gửi lời nhắc (Nudge) và gợi ý ưu đãi tài chính.</p>
+    </div>
+  </div>
+</div>
             </div>
             <div className="solution-card" data-reveal>
               <div className="mini-browser">
