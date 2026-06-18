@@ -4,7 +4,7 @@ import ArchitecturalScene from './ArchitecturalScene'
 const painStats = [
   {
     value: '67%',
-    title: 'người trẻ gặp khó khăn trong quản lý tài chính cá nhân',
+    title: 'Người trẻ gặp khó khăn trong quản lý tài chính cá nhân',
     detail: 'Quản lý tiền vẫn đang là một kỹ năng nhiều người trẻ chưa có công cụ đủ gần gũi để duy trì mỗi ngày.',
   },
   {
@@ -65,26 +65,26 @@ const bankValues = [
 
 const roadmap = [
   {
-    phase: 'Phase 1',
-    title: 'Build trust in daily money logging',
+    phase: 'Giai đoạn 1',
+    title: 'XÂY DỰNG MVP',
     time: 'Q3 2026',
     items: ['AI nhập liệu đa phương thức', 'Dashboard chi tiêu dễ hiểu', 'Onboarding theo mục tiêu cá nhân'],
   },
   {
-    phase: 'Phase 2',
-    title: 'Turn engagement into habit',
+    phase: 'Giai đoạn 2',
+    title: 'THỬ NGHIỆM',
     time: 'Q4 2026',
     items: ['Streak và Pockie Xu', 'Voucher từ đối tác tài chính', 'AI Pet đồng hành theo hành vi'],
   },
   {
-    phase: 'Phase 3',
-    title: 'Connect users to the right financial products',
+    phase: 'Giai đoạn 3',
+    title: 'MỞ RỘNG QUY MÔ',
     time: 'Q1 2027',
     items: ['Gợi ý tài khoản, thẻ, tiết kiệm', 'Nudge cá nhân hóa theo dữ liệu thật', 'Campaign đồng thương hiệu cùng ngân hàng'],
   },
   {
-    phase: 'Phase 4',
-    title: 'Scale into a youth financial ecosystem',
+    phase: 'Giai đoạn 4',
+    title: 'ĐỊNH HƯỚNG',
     time: 'Q2 2027',
     items: ['Open API với ngân hàng', 'Phân khúc người dùng theo hành vi', 'Báo cáo insight và tăng trưởng'],
   },
@@ -442,7 +442,7 @@ function App() {
             ))}
           </div>
           <div className="footer-bottom">
-            <p>Pockie concept landing page for product showcase and partnership storytelling.</p>
+            <p>Trang web giới thiệu sản phẩm Pockie và kết nối câu chuyện hợp tác cùng đối tác.</p>
             <a href="mailto:team@pockie.app">team@pockie.app</a>
           </div>
         </div>
