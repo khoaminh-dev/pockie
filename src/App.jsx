@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import ArchitecturalScene from './ArchitecturalScene'
+import pockieLogo from './assets/images/Pockie.png' // Ảnh logo Pockie
+import ghostIcon from './assets/images/Mascot.png' // Ảnh ghost icon
 
 const painStats = [
   {
@@ -168,8 +170,8 @@ function App() {
       <header className="topbar">
         <div className="container topbar-inner">
           <a className="brand" href="#hero" aria-label="Pockie home">
-            <span className="brand-mark">P</span>
-            <span className="brand-text">Pockie</span>
+            <img src={ghostIcon} alt="Ghost Icon" className="brand-mark-img" />
+            <img src={pockieLogo} alt="Pockie Logo" className="brand-text-img" />
           </a>
           <nav className="nav">
             <a href="#problem">Vấn đề</a>
@@ -190,7 +192,7 @@ function App() {
           <div className="container hero-grid">
             <div className="hero-copy" data-reveal>
               <div className="eyebrow">AI financial companion for Gen Z</div>
-              <h1>Pockie</h1>
+              <img src={pockieLogo} alt="Pockie Logo" className="hero-logo" />
               <p>
                 Trợ lý tài chính cá nhân giúp người trẻ ghi chi tiêu, hiểu hành vi tiền bạc và nhận gợi ý phù hợp bằng AI.
               </p>

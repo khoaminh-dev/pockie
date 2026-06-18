@@ -101,6 +101,33 @@ a {
   color: var(--ink);
 }
 
+/* --- CSS CHO LOGO TRÊN THANH HEADER --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa icon con ma và chữ Pockie */
+  text-decoration: none;
+}
+
+/* Ẩn/Xóa các style cũ của cục màu đen chữ P nếu nó vẫn còn vướng */
+.brand-mark, .brand-text {
+  display: none !important; 
+}
+
+/* Canh chỉnh kích thước icon con ma */
+.brand-mark-img {
+  height: 36px; /* Chiều cao vừa vặn với header */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Canh chỉnh kích thước chữ Pockie */
+.brand-text-img {
+  height: 28px; /* Chữ thường thấp hơn icon một chút để tạo sự cân đối */
+  width: auto;
+  object-fit: contain;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -295,6 +322,13 @@ a {
 }
 
 
+.hero-logo {
+  max-width: 320px; 
+  width: 100%;
+  height: auto;
+  margin: 16px 0 24px 0; 
+  display: block;
+}
 
 .pet-nudge {
   background: #eef2ff;
@@ -836,143 +870,152 @@ a {
 }
 
 /* Update color theme (override)*/
-/* --- CẬP NHẬT BẢNG MÀU CHỦ ĐẠO THEO DESIGN POCKIE --- */
 
-/* 1. Nền trang web (Màu xanh lá pastel nhạt) */
+
+
 body, .page-shell {
   background-color: #eaf5e1 !important; 
   
 }
 
-/* 2. Màu chữ (Xanh lá đậm) */
+
 h1, h2, h3, h4, .brand-text, .section-kicker, strong {
-  color: #16a34a !important; 
+  color: #5ac5a5 !important; 
 }
 
 p, li, .problem-item, .loop-steps div {
-  color: #064e3b !important; /* Tone xanh cực đậm để dễ đọc văn bản */
+  color: #163f33 !important; 
 }
 
-/* 3. Nút bấm và Thành phần nổi bật (Xanh lá tươi & Vàng) */
+
+/* --- CẬP NHẬT MÀU NÚT BẤM SANG TURQUOISE THEO LOGO --- */
+
+/* Nút chính (Xem cách hoạt động) */
 .button.primary {
-  background: linear-gradient(135deg, #4ade80, #16a34a) !important; /* Dải màu gradient giống 3 nút Capture/Voice trong ảnh */
+  background: #5ac5a5 !important; /* Màu turquoise của logo */
   color: #ffffff !important;
-  border: none !important;
+  border: 2px solid #5ac5a5 !important;
 }
 
+/* Hiệu ứng khi di chuột vào nút chính (màu đậm hơn một chút) */
 .button.primary:hover {
-  background: linear-gradient(135deg, #22c55e, #15803d) !important;
+  background: #48a68b !important; 
+  border-color: #48a68b !important;
 }
 
+/* Nút phụ (Xem roadmap) */
 .button.ghost {
-  border: 2px solid #16a34a !important;
-  color: #16a34a !important;
+  border: 2px solid #5ac5a5 !important;
+  color: #5ac5a5 !important;
   background-color: transparent !important;
 }
 
-/* 4. Khung Card (Màu trắng, giữ nguyên layout) */
-.app-card, .pet-nudge, .problem-item, .ai-layer-item, .feature-card, .timeline-card, .team-card, .solution-card {
-  background-color: #ffffff !important;
-  border: 1px solid #dcfce7 !important; /* Viền xanh siêu nhạt */
+/* Hiệu ứng khi di chuột vào nút phụ */
+.button.ghost:hover {
+  background-color: #eaf5e1 !important; /* Nền xanh siêu nhạt khi hover */
 }
 
-/* 5. Cập nhật Icon và Tag */
+
+.app-card, .pet-nudge, .problem-item, .ai-layer-item, .feature-card, .timeline-card, .team-card, .solution-card {
+  background-color: #ffffff !important;
+  border: 1px solid #dcfce7 !important; 
+}
+
+
 .layer-icon {
   background: linear-gradient(135deg, #4ade80, #16a34a) !important;
   color: #ffffff !important;
 }
 
 .feature-tag {
-  background-color: #fbeb99 !important; /* Màu vàng nhấn từ ngôi sao Pockie */
-  color: #064e3b !important;
+  background-color: #fbeb99 !important; 
+  color: #163f33 !important;
 }
 
-/* 6. Cập nhật viền iPhone ở Hero Section */
+
 .main-phone {
-  border-color: #374151 !important; /* Viền điện thoại màu xám đen truyền thống */
+  border-color: #374151 !important; 
   background-color: #ffffff !important;
 }
 
 .eyebrow {
-  color: #16a34a !important; /* Màu xanh lá đậm cho Eyebrow */
+  color: #5bc9a5 !important; 
 }
 
 
-/* --- ĐỔI MÀU XANH ĐẬM HƠN CHO TIÊU ĐỀ SECTION --- */
+
 .section-heading h2 {
-  color: #064e3b !important; /* Xanh lá tone cực đậm để tạo độ tương phản cao */
+  color: #0b553f !important; 
 }
 
-/* --- ĐỔI MÀU XANH LÁ ĐẬM CHO CÁC SỐ THỨ TỰ (01, 02, 03) --- */
+
 .problem-tile span {
-  color: #064e3b !important; /* Xanh lá đậm. (Bạn có thể đổi thành #16a34a nếu muốn màu xanh tươi hơn một chút) */
+  color: #064e3b !important;
   font-size: 50px !important;
-  background: #fbeb99 !important; /* Thêm nền vàng nhạt cho số thứ tự để nổi bật hơn */
+  background: #fbeb99 !important; 
   border-radius: 12px;
   padding: 10px 13px;
 }
 
-/* --- ĐỘ TƯƠNG PHẢN CHO 2 BOX GIÁ TRỊ --- */
 
-/* 1. Box bên trái (Nền sáng - Chữ xanh) */
+
+
 .value-card {
-  background-color: #ffffff !important; /* Nền trắng sáng */
+  background-color: #ffffff !important; 
 }
 
 .value-card h2, 
 .value-card .section-kicker {
-  color: #16a34a !important; /* Tiêu đề xanh lá */
+  color: #5ac5a5 !important; 
 }
 
 .value-card .check-list li {
-  color: #064e3b !important; /* Text nội dung xanh siêu đậm */
+  color: #064e3b !important; 
 }
 
 
 
-/* 2. Box bên phải (Nền xanh - chữ trắng) */
+
 .value-card.dark-card {
-  background-color: #16a34a !important; /* Nền tối (xám than/navy đậm) */
-  border: none !important; /* Bỏ viền để khối tối nhìn liền mạch hơn */
+  background-color: #5ac5a5 !important; 
+  border: none !important; 
 }
 
 .value-card.dark-card h2,
 .value-card.dark-card .section-kicker,
 .value-card.dark-card .check-list.light li {
-  color: #ffffff !important; /* Chữ màu vàng sáng rực rỡ */
+  color: #ffffff !important; 
 }
 
-/* Đổi màu dấu chấm (bullet) của thẻ <li> trong box tối thành vàng luôn cho đồng bộ */
 .value-card.dark-card .check-list.light li::before {
   background-color: #ffffff !important;
 }
 
-/* --- ĐỔI MÀU BULLET POINT THÀNH XANH LÁ --- */
+
 .value-card .check-list li::marker,
 .value-card .check-list li::before {
-  color: #16a34a !important; /* Dành cho list-style mặc định */
-  background-color: #16a34a !important; /* Dành cho bullet custom (nếu có) */
+  color: #5ac5a5 !important; 
+  background-color: #5ac5a5 !important; 
 }
 
-/* --- ĐỔI MÀU CHỮ "PHASE" VÀ BULLET POINT Ở ROADMAP THÀNH XANH LÁ --- */
+
 .timeline-card .timeline-top span {
-  color: #064e3b !important; /* Xanh lá đậm cho chữ PHASE */
+  color: #064e3b !important; 
   font-weight: 700;
 }
 
 .timeline-card ul li::marker,
 .timeline-card ul li::before {
-  color: #16a34a !important; /* Xanh lá tươi cho dấu chấm */
-  background-color: #16a34a !important;
+  color: #5ac5a5 !important;
+  background-color: #5ac5a5 !important;
 }
 
-/* --- ĐỔI ROADMAP BOX SANG NỀN XANH, CHỮ TRẮNG --- */
+
 .timeline-card {
-  background-color: #16a34a !important; /* Nền xanh lá đậm */
-  border: none !important; /* Bỏ viền */
+  background-color: #5ac5a5 !important; 
+  border: none !important; 
 }
 
-/* Đổi toàn bộ text (Tiêu đề, Giai đoạn, Nội dung) thành màu trắng */
 .timeline-card h3,
 .timeline-card .timeline-top span,
 .timeline-card .timeline-top strong,
@@ -981,24 +1024,24 @@ p, li, .problem-item, .loop-steps div {
 }
 
 
-/* Đổi màu dấu chấm (bullet point) sang màu vàng chanh để nổi bật trên nền xanh */
+
 .timeline-card ul li::marker,
 .timeline-card ul li::before {
   color: #fde047 !important; 
   background-color: #fde047 !important;
 }
 
-/* --- ĐỔI MÀU CHỨC DANH TRONG PHẦN ĐỘI NGŨ SANG XANH LÁ --- */
+
 .footer-heading h2{
-  color: #064e3b !important; /* Xanh lá đậm cho tiêu đề phần đội ngũ */
+  color: #064e3b !important; 
 }
 .team-meta h3 {
-  color: #16a34a !important; /* Xanh lá tươi đồng bộ với màu nhấn của Pockie */
-  font-weight: 600; /* Có thể làm chữ đậm lên một chút để nổi bật hơn */
+  color: #5ac5a5 !important; 
+  font-weight: 600; 
 }
 .team-meta span {
-  color: #16a34a !important; /* Xanh lá tươi đồng bộ với màu nhấn của Pockie */
-  font-weight: 600; /* Có thể làm chữ đậm lên một chút để nổi bật hơn */
+  color: #5ac5a5 !important; 
+  font-weight: 600; 
 }
 
 [data-reveal] {
