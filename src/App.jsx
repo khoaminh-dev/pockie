@@ -226,22 +226,7 @@ function App() {
                       <span className="dynamic-island" />
                       <span>100%</span>
                     </div>
-                    {/* <div className="app-card balance-card">
-                      <span>Pockie Balance</span>
-                      <strong>3.240.000đ</strong>
-                      <p>Hôm nay bạn đang chi ít hơn 12% so với trung bình tuần.</p>
-                    </div>
-                    <div className="pet-nudge">
-                      <span>AI Pet</span>
-                      <p>Giữ streak thêm 2 ngày để mở voucher cà phê cuối tuần.</p>
-                    </div>
-                    <div className="mini-chart">
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                      <span />
-                    </div> */}
+                    
                     <div className="screen-content">
                       <img src={appHomeImage} alt="Pockie App Home Screen" className="app-screen-img" />
                     </div>
@@ -376,7 +361,7 @@ function App() {
             </div>
             <div className="video-container" data-reveal>
               <iframe
-              src="https://www.youtube.com/embed/rYWLIJB214Q?rel=0"
+              src="https://www.youtube.com/embed/xqJGpdZ6J3g?rel=0"
               title="Pockie Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
