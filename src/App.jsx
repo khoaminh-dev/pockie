@@ -3,6 +3,7 @@ import ArchitecturalScene from './ArchitecturalScene'
 import pockieLogo from './assets/images/Pockie.png' // Ảnh logo Pockie (Title)
 import logoBar from './assets/images/logo_nav.png' // Ảnh logo bar (Favicon)
 import ghostIcon from './assets/images/Mascot.png' // Ảnh ghost icon
+import appHomeImage from './assets/images/home.png' // Ảnh minh họa phone screen
 
 import myAvatar from './assets/images/my.jpg'
 import khoaAvatar from './assets/images/khoa.jpg'
@@ -225,7 +226,7 @@ function App() {
                       <span className="dynamic-island" />
                       <span>100%</span>
                     </div>
-                    <div className="app-card balance-card">
+                    {/* <div className="app-card balance-card">
                       <span>Pockie Balance</span>
                       <strong>3.240.000đ</strong>
                       <p>Hôm nay bạn đang chi ít hơn 12% so với trung bình tuần.</p>
@@ -240,6 +241,9 @@ function App() {
                       <span />
                       <span />
                       <span />
+                    </div> */}
+                    <div className="screen-content">
+                      <img src={appHomeImage} alt="Pockie App Home Screen" className="app-screen-img" />
                     </div>
                   </article>
                 </div>

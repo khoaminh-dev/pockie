@@ -273,31 +273,37 @@ a {
 }
 
 
-.dynamic-island {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 30px;
-  background-color: #000000;
-  border-radius: 20px;
-  z-index: 10;
-}
-
+/* --- SỬA LỖI RESPONSIVE CHO CỤM THANH TRẠNG THÁI & DYNAMIC ISLAND --- */
 
 .phone-status {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 16px 24px;
+  justify-content: space-between; /* Đẩy phần "9:41" và "100%" ra sát 2 mép */
+  align-items: center;
+  padding: 14px 24px 0 24px; /* Thêm khoảng trống an toàn để chữ không dính vào viền máy */
+  position: relative; /* Làm cột mốc để căn giữa Dynamic Island */
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.phone-status span {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
-  box-sizing: border-box;
+  color: #111827; /* Đảm bảo chữ màu đen sắc nét */
+  z-index: 2;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Bí kíp căn giữa tuyệt đối trên mọi màn hình */
+  width: 32%; /* Dùng % để viên thuốc tự động co giãn to nhỏ theo màn hình */
+  max-width: 120px; /* Không cho phép to quá trên màn hình lớn */
+  min-width: 90px; /* Không cho phép nhỏ quá trên mobile */
+  height: 28px;
+  background-color: #000 !important;
+  border-radius: 20px;
+  z-index: 1;
 }
 
 .app-card {
@@ -324,6 +330,45 @@ a {
   color: #10b981; 
   margin: 0;
   line-height: 1.4;
+}
+
+/* --- CSS SỬA LỖI ẢNH APP KHÔNG FULL SCREEN VÀ ĐẢM BẢO RESPONSIVE --- */
+
+/* 1. Thiết lập container chính bọc ngoài điện thoại */
+.main-phone {
+  width: 100%;
+  max-width: 340px; /* Giới hạn chiều rộng tối đa trên màn hình máy tính (bạn có thể tùy chỉnh) */
+  height: auto !important; /* Rất quan trọng: Bỏ/Ghi đè chiều cao cố định cũ */
+  aspect-ratio: 9 / 19.5; /* Khóa cứng tỷ lệ dọc/ngang chuẩn của màn hình iPhone */
+  margin: 0 auto; /* Tự động căn giữa khung điện thoại */
+  padding: 0; /* Remove padding */
+  overflow: hidden; /* Cắt gọn ảnh thừa ngoài viền bo góc */
+  display: flex; /* Dùng flexbox để layout phần status bar và screen */
+  flex-direction: column;
+}
+
+/* 2. Căn chỉnh phần chứa nội dung màn hình (dưới status bar) */
+.screen-content {
+  flex: 1; /* Chiếm trọn không gian còn lại theo chiều dọc */
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Cắt ảnh thừa nếu aspect ratio không khớp */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Ưu tiên hiển thị từ đỉnh ảnh xuống */
+}
+
+/* 3. Thiết lập thuộc tính quan trọng cho ảnh để FULL SCREEN */
+.app-screen-img {
+  width: 100% !important; /* Ép ảnh luôn full chiều rộng container */
+  height: 100% !important; /* Ép ảnh luôn full chiều cao container */
+  object-fit: cover !important; /* Thần chú: Lấp đầy khung hình mà không méo ảnh */
+  object-position: top center; /* Giữ phần "Hi, Khoa!" luôn ở đỉnh màn hình */
+  
+  /* Đảm bảo responsive: không có margin/padding thừa */
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 
