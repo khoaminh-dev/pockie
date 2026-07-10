@@ -3,7 +3,8 @@ import ArchitecturalScene from './ArchitecturalScene'
 import pockieLogo from './assets/images/Pockie.png' // Ảnh logo Pockie (Title)
 import logoBar from './assets/images/logo_nav.png' // Ảnh logo bar (Favicon)
 import ghostIcon from './assets/images/Mascot.png' // Ảnh ghost icon
-import appHomeImage from './assets/images/home.png' // Ảnh minh họa phone screen
+import appHomeVideo from './assets/videos/demo.mov' // Ảnh minh họa phone screen
+import animationVideo from './assets/videos/animation.mp4'
 
 import myAvatar from './assets/images/my.jpg'
 import khoaAvatar from './assets/images/khoa.jpg'
@@ -208,8 +209,8 @@ function App() {
                 Trợ lý tài chính cá nhân giúp người trẻ ghi chi tiêu, hiểu hành vi tiền bạc và nhận gợi ý phù hợp bằng AI.
               </p>
               <div className="hero-actions">
-                <a className="button primary" href="#solution">
-                  Xem cách hoạt động
+                <a className="button primary" href="https://user.pockie.bkuteam.site">
+                  Truy cập Pockie
                 </a>
                 <a className="button ghost" href="#roadmap">
                   Xem roadmap
@@ -226,9 +227,11 @@ function App() {
                       <span className="dynamic-island" />
                       <span>100%</span>
                     </div>
-                    
+
                     <div className="screen-content">
-                      <img src={appHomeImage} alt="Pockie App Home Screen" className="app-screen-img" />
+                      <video autoPlay loop muted playsInline alt="Pockie App Home Screen" className="app-screen-img">
+                        <source src={appHomeVideo} type="video/mp4" />
+                      </video>
                     </div>
                   </article>
                 </div>
@@ -273,28 +276,28 @@ function App() {
                 <h2>Pockie giải quyết ba điểm nghẽn lớn nhất trong hành trình<span className="highlight">tài chính cá nhân</span>.</h2>
               </div>
               <div className="ai-layers-list">
-  <div className="ai-layer-item">
-    <div className="layer-icon"><i className="fas fa-camera"></i></div>
-    <div className="layer-content">
-      <h3>1. Lớp Capture</h3>
-      <p>Quét hóa đơn bằng OCR hoặc thu âm giọng nói (Speech-to-text) để tự động điền số tiền trong 1 giây.</p>
-    </div>
-  </div>
-  <div className="ai-layer-item">
-    <div className="layer-icon"><i className="fas fa-chart-bar" /></div>
-    <div className="layer-content">
-      <h3>2. Lớp Analysis</h3>
-      <p>Mô hình phân loại giao dịch tự động phân tích hành vi và biến dữ liệu thô thành biểu đồ dễ hiểu.</p>
-    </div>
-  </div>
-  <div className="ai-layer-item">
-    <div className="layer-icon"><i className="fas fa-robot" /></div>
-    <div className="layer-content">
-      <h3>3. Lớp Recommendation</h3>
-      <p>AI Pet cá nhân hóa đóng vai trò như một người bạn, gửi lời nhắc (Nudge) và gợi ý ưu đãi tài chính.</p>
-    </div>
-  </div>
-</div>
+                <div className="ai-layer-item">
+                  <div className="layer-icon"><i className="fas fa-camera"></i></div>
+                  <div className="layer-content">
+                    <h3>1. Lớp Capture</h3>
+                    <p>Quét hóa đơn bằng OCR hoặc thu âm giọng nói (Speech-to-text) để tự động điền số tiền trong 1 giây.</p>
+                  </div>
+                </div>
+                <div className="ai-layer-item">
+                  <div className="layer-icon"><i className="fas fa-chart-bar" /></div>
+                  <div className="layer-content">
+                    <h3>2. Lớp Analysis</h3>
+                    <p>Mô hình phân loại giao dịch tự động phân tích hành vi và biến dữ liệu thô thành biểu đồ dễ hiểu.</p>
+                  </div>
+                </div>
+                <div className="ai-layer-item">
+                  <div className="layer-icon"><i className="fas fa-robot" /></div>
+                  <div className="layer-content">
+                    <h3>3. Lớp Recommendation</h3>
+                    <p>AI Pet cá nhân hóa đóng vai trò như một người bạn, gửi lời nhắc (Nudge) và gợi ý ưu đãi tài chính.</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="solution-card" data-reveal>
               <div className="mini-browser">
@@ -360,13 +363,14 @@ function App() {
               </div>
             </div>
             <div className="video-container" data-reveal>
-              <iframe
-              src="https://www.youtube.com/embed/xqJGpdZ6J3g?rel=0"
-              title="Pockie Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+              <video
+                src={animationVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
             </div>
           </div>
         </section>
@@ -425,7 +429,7 @@ function App() {
           <div className="footer-heading" data-reveal>
             <span className="section-kicker">Đội ngũ & liên hệ</span>
             <h2>Nhóm phát triển Pockie</h2>
-          
+
           </div>
           <div className="team-grid">
             {team.map((member) => (
